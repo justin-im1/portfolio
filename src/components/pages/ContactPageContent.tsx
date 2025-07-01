@@ -14,11 +14,11 @@ const ContactPageContent: React.FC<PageContentProps> = ({ themeColor }) => {
            style={getThemedTextStyle(themeColor)}>
           justin.im@uwaterloo.ca
         </a>
-        <a href="https://docs.google.com/document/d/1B6m2K8tWl4F5x8x8X9r0z9c6b7s5j7f8/export?format=pdf" target="_blank" rel="noopener noreferrer"
+        {/* <a href="https://docs.google.com/document/d/1B6m2K8tWl4F5x8x8X9r0z9c6b7s5j7f8/export?format=pdf" target="_blank" rel="noopener noreferrer"
            className={`text-xl font-medium hover:underline transition-colors duration-300 text-gray-400 hover:text-white cursor-pointer`}
            style={getThemedTextStyle(themeColor)}>
           Download Resume (PDF)
-        </a>
+        </a> */}
         <p className="text-base text-gray-500">Phone: 647-640-1125</p>
       </div>
     </>

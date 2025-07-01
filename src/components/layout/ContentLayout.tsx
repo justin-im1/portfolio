@@ -5,7 +5,7 @@ import GithubSocialIcon from '@/components/icons/GithubSocialIcon';
 import LinkedinSocialIcon from '@/components/icons/LinkedinSocialIcon';
 
 const ContentLayout: React.FC<ContentLayoutProps> = ({ title, children, themeColor, onGoBack }) => (
-  <div className="font-inter antialiased text-gray-100 bg-black min-h-screen flex items-start justify-center relative overflow-hidden py-16">
+          <div className="font-inter antialiased text-gray-100 bg-black min-h-screen flex items-start justify-center relative overflow-hidden py-16">
     {/* Subtle radial gradient background effect */}
     <div className="absolute inset-0 pointer-events-none opacity-80"
          style={getBackgroundRadialGradientStyle(themeColor)}></div>
