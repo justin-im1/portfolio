@@ -28,7 +28,8 @@ export const experiences: Experience[] = [
   {
     title: 'Software Developer Intern',
     company: 'University Health Network',
-    dates: 'September 2024 - December 2024, Toronto, ON',
+    dates: 'September 2024 - December 2024',
+    location: 'Toronto, ON',
     details: [
       'Developed a 10+ page dynamic web platform using React.js, enhancing accessibility for researchers by 30%',
       'Optimized API endpoints for MSSQL queries and tested them with Postman, reducing response times by 15%',
@@ -39,8 +40,9 @@ export const experiences: Experience[] = [
   },
   {
     title: 'UI/UX Designer and Developer Intern',
-    company: 'Vozer',
-    dates: 'January 2024 - April 2024, San Francisco, CA',
+    company: 'Voxer',
+    dates: 'January 2024 - April 2024',
+    location: 'San Francisco, CA',
     details: [
       'Led the end-to-end redesign of the UI/UX for all platforms, boosting weekly active users by 5% within one month',
       'Integrated 2+ key features into Voxer Pro on Android and iOS using React Native, resulting in retained users',

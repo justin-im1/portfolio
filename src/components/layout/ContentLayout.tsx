@@ -1,15 +1,11 @@
 import React from 'react';
 import { ContentLayoutProps } from '@/types';
-import { getThemedTextStyle, getBackgroundRadialGradientStyle } from '@/utils/styling';
+import { getThemedTextStyle } from '@/utils/styling';
 import GithubSocialIcon from '@/components/icons/GithubSocialIcon';
 import LinkedinSocialIcon from '@/components/icons/LinkedinSocialIcon';
 
 const ContentLayout: React.FC<ContentLayoutProps> = ({ title, children, themeColor, onGoBack }) => (
           <div className="font-inter antialiased text-gray-100 bg-black min-h-screen flex items-start justify-center relative overflow-hidden py-16">
-    {/* Subtle radial gradient background effect */}
-    <div className="absolute inset-0 pointer-events-none opacity-80"
-         style={getBackgroundRadialGradientStyle(themeColor)}></div>
-    <div className={`absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none`}></div>
 
     <div className="max-w-2xl mx-auto px-6 relative z-10 w-full animate-content-fade-in">
       {/* Back to Main Page Button */}

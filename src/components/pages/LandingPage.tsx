@@ -216,105 +216,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
     <div className="relative w-full h-screen bg-black text-white font-inter flex flex-col items-center justify-center p-8 overflow-hidden">
       {/* Dynamic radial gradient for landing page with pulsing effect */}
       <div className="absolute inset-0 bg-gradient-radial from-gray-800/20 to-transparent animate-pulse-light pointer-events-none"></div>
-      <div className={`absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none`}></div>
       
-      {/* Corner light sources with pulsing animation */}
-      {/* Top-left light - Blue */}
-      <motion.div 
-        className="absolute top-0 left-0 w-96 h-96 pointer-events-none"
-        animate={{
-          opacity: [0.8, 1, 0.8],
-          scale: [1, 1.05, 1]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        style={{
-          background: `radial-gradient(circle at 0% 0%, 
-            rgba(14, 165, 233, 0.15) 0%, 
-            rgba(14, 165, 233, 0.08) 30%, 
-            rgba(14, 165, 233, 0.03) 50%, 
-            transparent 70%)`
-        }}
-      />
-      
-      {/* Top-right light - Purple */}
-      <motion.div 
-        className="absolute top-0 right-0 w-96 h-96 pointer-events-none"
-        animate={{
-          opacity: [0.8, 1, 0.8],
-          scale: [1, 1.05, 1]
-        }}
-        transition={{
-          duration: 4.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        style={{
-          background: `radial-gradient(circle at 100% 0%, 
-            rgba(168, 85, 247, 0.15) 0%, 
-            rgba(168, 85, 247, 0.08) 30%, 
-            rgba(168, 85, 247, 0.03) 50%, 
-            transparent 70%)`
-        }}
-      />
-      
-      {/* Bottom-left light - Rose */}
-      <motion.div 
-        className="absolute bottom-0 left-0 w-96 h-96 pointer-events-none"
-        animate={{
-          opacity: [0.8, 1, 0.8],
-          scale: [1, 1.05, 1]
-        }}
-        transition={{
-          duration: 3.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-        style={{
-          background: `radial-gradient(circle at 0% 100%, 
-            rgba(225, 29, 72, 0.15) 0%, 
-            rgba(225, 29, 72, 0.08) 30%, 
-            rgba(225, 29, 72, 0.03) 50%, 
-            transparent 70%)`
-        }}
-      />
-      
-      {/* Bottom-right light - Emerald */}
-      <motion.div 
-        className="absolute bottom-0 right-0 w-96 h-96 pointer-events-none"
-        animate={{
-          opacity: [0.8, 1, 0.8],
-          scale: [1, 1.05, 1]
-        }}
-        transition={{
-          duration: 4.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 3
-        }}
-        style={{
-          background: `radial-gradient(circle at 100% 100%, 
-            rgba(16, 185, 129, 0.15) 0%, 
-            rgba(16, 185, 129, 0.08) 30%, 
-            rgba(16, 185, 129, 0.03) 50%, 
-            transparent 70%)`
-        }}
-      />
+
 
       <div className="text-center max-w-4xl">
         <h1 
           className="text-6xl md:text-8xl font-bold text-white animate-fade-in tracking-tight"
           style={{
             textShadow: `
-              0 0 10px rgba(255, 255, 255, 0.4),
-              0 0 20px rgba(255, 255, 255, 0.3),
-              0 0 30px rgba(255, 255, 255, 0.2),
-              0 0 40px rgba(255, 255, 255, 0.1)
+              0 0 10px rgba(255, 255, 255, 0.3),
+              0 0 20px rgba(255, 255, 255, 0.2),
+              0 0 30px rgba(255, 255, 255, 0.15),
+              0 0 40px rgba(255, 255, 255, 0.08)
             `
           }}
         >
@@ -344,22 +257,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
                   style={{
                     opacity: activeDot === dotIndex ? Math.max(1.0 - trailIndex * 0.045, 0.2) : 0,
                     filter: `blur(${trailIndex * 0.15}px)`,
-                    transform: `scale(${Math.max(1.1 - trailIndex * 0.04, 0.4)})`,
-                    boxShadow: (() => {
-                      const colors = {
-                        blue: '59, 130, 246',
-                        purple: '168, 85, 247', 
-                        pink: '236, 72, 153',
-                        emerald: '16, 185, 129'
-                      };
-                      const rgb = colors[dot.color as keyof typeof colors];
-                      const intensity = Math.max(0.9 - trailIndex * 0.035, 0.25);
-                      return `
-                        0 0 ${8 + trailIndex * 0.8}px rgba(${rgb}, ${intensity}),
-                        0 0 ${16 + trailIndex * 1.2}px rgba(${rgb}, ${intensity * 0.6}),
-                        0 0 ${24 + trailIndex * 1.5}px rgba(${rgb}, ${intensity * 0.3})
-                      `;
-                    })()
+                    transform: `scale(${Math.max(1.1 - trailIndex * 0.04, 0.4)})`
                   }}
                 />
               ))}
@@ -378,23 +276,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
               className={`w-3 h-3 bg-${dot.color}-500 rounded-full relative ${
                 activeDot === index ? 'z-50' : 'z-10'
               }`}
-              style={{
-                boxShadow: (() => {
-                  const colors = {
-                    blue: '59, 130, 246',
-                    purple: '168, 85, 247', 
-                    pink: '236, 72, 153',
-                    emerald: '16, 185, 129'
-                  };
-                  const rgb = colors[dot.color as keyof typeof colors];
-                  return `
-                    0 0 8px rgba(${rgb}, 0.6),
-                    0 0 16px rgba(${rgb}, 0.4),
-                    0 0 24px rgba(${rgb}, 0.2),
-                    inset 0 0 8px rgba(255, 255, 255, 0.2)
-                  `;
-                })()
-              }}
+
               initial={{ 
                 scale: 0,
                 rotate: dot.angle,
@@ -417,57 +299,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
                 opacity: { duration: 0.4, delay: dot.delay, type: "tween" }
               }}
             >
-              {/* Enhanced glow for active dot */}
-              {activeDot === index && (
-                <motion.div
-                  className={`absolute inset-0 bg-${dot.color}-300 rounded-full`}
-                  animate={{
-                    scale: [1, 2, 1],
-                    opacity: [0.8, 0.3, 0.8]
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              )}
-              
-              {/* Enhanced inner glow effect */}
-              <motion.div
-                className={`absolute inset-0 bg-${dot.color}-300 rounded-full`}
-                animate={{
-                  scale: [1, 1.4, 1],
-                  opacity: [0.3, 0.7, 0.3]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: dot.delay + 1
-                }}
-                style={{
-                  filter: `blur(1px)`
-                }}
-              />
-              
-              {/* Pulsing outer glow */}
-              <motion.div
-                className={`absolute inset-0 bg-${dot.color}-400 rounded-full`}
-                animate={{
-                  scale: [1, 1.6, 1],
-                  opacity: [0.4, 0.1, 0.4]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: dot.delay + 0.5
-                }}
-                style={{
-                  filter: `blur(2px)`
-                }}
-              />
             </motion.div>
           ))}
         </motion.div>
@@ -475,16 +306,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
 
       {/* Top-Left Option - Blue Theme for WORK EXPERIENCE */}
       <button
-        className="absolute top-4 left-4 text-sky-400 hover:text-sky-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-tl transform hover:scale-105 cursor-pointer"
-        style={{ 
-          textShadow: `
-            0 0 8px rgba(14, 165, 233, 0.8),
-            0 0 16px rgba(14, 165, 233, 0.6),
-            0 0 24px rgba(14, 165, 233, 0.4),
-            0 0 32px rgba(14, 165, 233, 0.2)
-          `
-        }}
-        onClick={() => onEnterPortfolio('sky', 'work_history')}
+        className="absolute top-4 left-4 text-blue-400 hover:text-blue-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-tl transform hover:scale-105 cursor-pointer"
+        onClick={() => onEnterPortfolio('blue', 'work_history')}
       >
         WORK EXPERIENCE
       </button>
@@ -492,31 +315,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
       {/* Top-Right Option - Purple Theme for ABOUT */}
       <button
         className="absolute top-4 right-4 text-purple-400 hover:text-purple-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-tr transform hover:scale-105 cursor-pointer"
-        style={{ 
-          textShadow: `
-            0 0 8px rgba(168, 85, 247, 0.8),
-            0 0 16px rgba(168, 85, 247, 0.6),
-            0 0 24px rgba(168, 85, 247, 0.4),
-            0 0 32px rgba(168, 85, 247, 0.2)
-          `
-        }}
         onClick={() => onEnterPortfolio('purple', 'about')}
       >
         ABOUT
       </button>
 
-      {/* Bottom-Left Option - Rose Theme for PROJECTS */}
+      {/* Bottom-Left Option - Pink Theme for PROJECTS */}
       <button
-        className="absolute bottom-4 left-4 text-rose-400 hover:text-rose-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-bl transform hover:scale-105 cursor-pointer"
-        style={{ 
-          textShadow: `
-            0 0 8px rgba(225, 29, 72, 0.8),
-            0 0 16px rgba(225, 29, 72, 0.6),
-            0 0 24px rgba(225, 29, 72, 0.4),
-            0 0 32px rgba(225, 29, 72, 0.2)
-          `
-        }}
-        onClick={() => onEnterPortfolio('rose', 'projects')}
+        className="absolute bottom-4 left-4 text-pink-400 hover:text-pink-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-bl transform hover:scale-105 cursor-pointer"
+        onClick={() => onEnterPortfolio('pink', 'projects')}
       >
         PROJECTS
       </button>
@@ -524,14 +331,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortfolio }) => {
       {/* Bottom-Right Option - Emerald Theme for CONTACT */}
       <button
         className="absolute bottom-4 right-4 text-emerald-400 hover:text-emerald-300 transition duration-300 text-lg md:text-xl font-medium focus:outline-none animate-slide-in-br transform hover:scale-105 cursor-pointer"
-        style={{ 
-          textShadow: `
-            0 0 8px rgba(16, 185, 129, 0.8),
-            0 0 16px rgba(16, 185, 129, 0.6),
-            0 0 24px rgba(16, 185, 129, 0.4),
-            0 0 32px rgba(16, 185, 129, 0.2)
-          `
-        }}
         onClick={() => onEnterPortfolio('emerald', 'contact')}
       >
         CONTACT

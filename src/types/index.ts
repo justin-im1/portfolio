@@ -10,6 +10,7 @@ export interface Experience {
   title: string;
   company: string;
   dates: string;
+  location: string;
   details: string[];
 }
 
