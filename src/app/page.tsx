@@ -16,24 +16,39 @@ const sections = [
   },
   {
     key: 'work',
-    title: 'Work',
+    title: 'Work Experience',
     color: 'purple',
     content: (
-      <div>
-        <div className="font-semibold">Software Developer Intern</div>
-        <div className="text-xs text-gray-400 mb-2">University Health Network · Toronto, ON · Sept-Dec 2024</div>
-        <ul className="list-disc list-inside text-gray-400 text-sm mb-4">
-          <li>Developed a dynamic web platform using React.js, enhancing accessibility for researchers by 30%</li>
-          <li>Optimized API endpoints for MSSQL queries, reducing response times by 15%</li>
-          <li>Implemented new features and managed data integration using dotCMS</li>
-        </ul>
-        <div className="font-semibold">UI/UX Designer and Developer Intern</div>
-        <div className="text-xs text-gray-400 mb-2">Voxer · San Francisco, CA · Jan-Apr 2024</div>
-        <ul className="list-disc list-inside text-gray-400 text-sm">
-          <li>Redesigned UI/UX for all platforms, boosting weekly active users by 5%</li>
-          <li>Integrated key features into Voxer Pro using React Native</li>
-          <li>Developed a UI for the Business Portal, increasing user satisfaction</li>
-        </ul>
+      <div className="space-y-5">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-medium text-white/90">Software Engineer Intern - Constant Contact</div>
+            <div className="text-gray-400 text-sm mt-1">Empowering small business marketing</div>
+          </div>
+          <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
+            <span className="text-2xl" role="img" aria-label="marketing">📈</span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-medium text-white/90">Software Developer Intern - University Health Network</div>
+            <div className="text-gray-400 text-sm mt-1">Building research platforms</div>
+          </div>
+          <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
+            <span className="text-2xl" role="img" aria-label="hospital">🏥</span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-medium text-white/90">UI/UX Designer and Developer Intern - Voxer</div>
+            <div className="text-gray-400 text-sm mt-1">Enhancing the telecom experience</div>
+          </div>
+          <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
+            <span className="text-2xl" role="img" aria-label="speech bubble">💬</span>
+          </div>
+        </div>
       </div>
     )
   },
@@ -75,15 +90,15 @@ export default function Home() {
     <main className="min-h-screen bg-black py-20 px-4">
       <div className="max-w-prose mx-auto">
         <header className="mb-24">
-          <h1 className="text-4xl md:text-5xl font-light tracking-widest text-white mb-2 uppercase text-left">Justin Im</h1>
-          <div className="text-base md:text-lg text-gray-400 font-light tracking-wide text-left">Systems Design Engineering @ Waterloo</div>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-widest text-white mb-2 uppercase text-left">Justin Im</h1>
+          {/* <div className="text-base md:text-lg text-gray-400 font-light tracking-wide text-left">Systems Design Engineering @ Waterloo</div> */}
         </header>
-        <div className="space-y-20">
+        <div className="space-y-12">
           {sections.map(section => (
             <section key={section.key}>
               <h2
-                className="text-xs md:text-xl font-bold mb-6 tracking-widest uppercase"
-                style={{ color: getThemedColorHex(section.color), letterSpacing: '0.2em' }}
+                className="text-xs md:text-2xl font-bold mb-4 tracking-widest"
+                style={{ color: getThemedColorHex(section.color)}}
               >
                 {section.title}
               </h2>
