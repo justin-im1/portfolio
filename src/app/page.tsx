@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { getThemedColorHex } from '@/utils/styling';
+import GithubSocialIcon from '@/components/icons/GithubSocialIcon';
 
 const sections = [
   {
@@ -22,7 +23,7 @@ const sections = [
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <div className="font-medium text-white/90">Software Engineer Intern - Constant Contact</div>
+            <div className="font-semibold text-white/90">Software Engineer Intern - Constant Contact</div>
             <div className="text-gray-400 text-sm mt-1">Empowering small business marketing</div>
           </div>
           <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
@@ -32,7 +33,7 @@ const sections = [
 
         <div className="flex items-center justify-between">
           <div>
-            <div className="font-medium text-white/90">Software Developer Intern - University Health Network</div>
+            <div className="font-semibold text-white/90">Software Developer Intern - University Health Network</div>
             <div className="text-gray-400 text-sm mt-1">Building research platforms</div>
           </div>
           <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
@@ -42,7 +43,7 @@ const sections = [
 
         <div className="flex items-center justify-between">
           <div>
-            <div className="font-medium text-white/90">UI/UX Designer and Developer Intern - Voxer</div>
+            <div className="font-semibold text-white/90">UI/UX Designer and Developer Intern - Voxer</div>
             <div className="text-gray-400 text-sm mt-1">Enhancing the telecom experience</div>
           </div>
           <div className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0">
@@ -57,16 +58,50 @@ const sections = [
     title: 'Projects',
     color: 'emerald',
     content: (
-      <div>
-        <div className="font-semibold">Golf In One</div>
-        <div className="text-xs text-gray-400 mb-1">MongoDB, Express.js, React.js, Node.js, Tailwind CSS</div>
-        <div className="text-gray-400 text-sm mb-3">Full-stack web app for golf stats and course discovery.</div>
-        <div className="font-semibold">SaaS Website Builder</div>
-        <div className="text-xs text-gray-400 mb-1">MySQL, Node.js, React.js, Next.js, TypeScript</div>
-        <div className="text-gray-400 text-sm mb-3">Scalable SaaS builder with authentication and Stripe payments.</div>
-        <div className="font-semibold">YelpCamp</div>
-        <div className="text-xs text-gray-400 mb-1">JavaScript, Express.js, Node.js, MongoDB, HTML/CSS</div>
-        <div className="text-gray-400 text-sm">Campground review app with a responsive UI and RESTful backend.</div>
+      <div className="space-y-5">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-semibold text-white/90">Golf In One</div>
+            <div className="text-gray-400 text-sm mt-1">Solution for tracking golf performance</div>
+          </div>
+          <a href="https://github.com/justin-im1/Golf-In-One" target="_blank" rel="noopener noreferrer" 
+             className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0 text-white">
+            <GithubSocialIcon />
+          </a>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-semibold text-white/90">SaaS Website Builder</div>
+            <div className="text-gray-400 text-sm mt-1">SaaS tool for building websites</div>
+          </div>
+          <a href="https://github.com/justin-im1/SaaS-Website-Builder" target="_blank" rel="noopener noreferrer" 
+             className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0 text-white">
+            <GithubSocialIcon />
+          </a>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-semibold text-white/90">Portfolio</div>
+            <div className="text-gray-400 text-sm mt-1">Personal portfolio to learn about me</div>
+          </div>
+          <a href="https://github.com/justin-im1/portfolio" target="_blank" rel="noopener noreferrer" 
+             className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0 text-white">
+            <GithubSocialIcon />
+          </a>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="font-semibold text-white/90">YelpCamp</div>
+            <div className="text-gray-400 text-sm mt-1">Campground review platform</div>
+          </div>
+          <a href="https://github.com/justin-im1/YelpCamp" target="_blank" rel="noopener noreferrer" 
+             className="w-10 h-10 flex items-center justify-center ml-6 flex-shrink-0 text-white">
+            <GithubSocialIcon />
+          </a>
+        </div>
       </div>
     )
   },
