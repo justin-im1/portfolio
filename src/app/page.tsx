@@ -146,7 +146,7 @@ const sections = [
         <div>
           <div className="font-semibold text-white/90 mb-2 text-base">Tools</div>
           <div className="text-gray-400 text-base">
-            Git, GitHub, Bitbucket, Docker, Visual Studio Code, Xcode, Postman, Jenkins, Figma
+            Git, GitHub, Bitbucket, Docker, AWS, Visual Studio Code, Xcode, Postman, Jenkins, Figma
           </div>
         </div>
       </div>
