@@ -179,7 +179,7 @@ const sections = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-black py-20 px-4">
-      <div className="max-w-prose mx-auto">
+      <div className="max-w-2xl mx-auto">
         <header className="mb-24">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-widest text-white mb-2 uppercase text-left text-white/90">Justin Im</h1>
           {/* <div className="text-base md:text-lg text-gray-400 font-light tracking-wide text-left">Systems Design Engineering @ Waterloo</div> */}
