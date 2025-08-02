@@ -8,6 +8,12 @@ export const getThemedColorHex = (colorName: string): string => {
     rose: '#e11d48',
     blue: '#3b82f6',
     pink: '#ec4899',
+    amber: '#f59e0b',
+    indigo: '#6366f1',
+    cyan: '#06b6d4',
+    orange: '#f97316',
+    yellow: '#eab308',
+    teal: '#14b8a6',
   };
   return colorName.startsWith('#') ? colorName : (colorsMap[colorName] || colorsMap.emerald);
 };
