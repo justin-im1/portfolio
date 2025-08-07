@@ -11,7 +11,7 @@ export default function SkillsSection() {
       <div>
         <div className="font-semibold text-white/90 mb-2 text-base">Libraries & Frameworks</div>
         <div className="text-gray-400 text-base">
-          React.js, React Native, Express.js, Node.js, Bootstrap, Tailwind CSS, Next.js, Expo, Prisma
+          React.js, React Native, Express.js, Node.js, Bootstrap, Tailwind CSS, Next.js, Expo, Prisma, Playwright
         </div>
       </div>
 
