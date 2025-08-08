@@ -19,7 +19,7 @@ const sectionComponents = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black py-20 px-4">
+    <main className="min-h-screen bg-black md:py-20 py-12 px-4">
       <div className="max-w-2xl mx-auto">
         <header className="mb-24">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-widest text-white/90 mb-2 uppercase text-left">Justin Im</h1>
@@ -30,7 +30,7 @@ export default function Home() {
             return (
               <section key={section.key}>
                 <h2
-                  className="text-xs md:text-2xl font-bold mb-4 tracking-widest"
+                  className="text-xl md:text-2xl font-bold mb-4 tracking-widest"
                   style={{ color: getThemedColorHex(section.color)}}
                 >
                   {section.title}
