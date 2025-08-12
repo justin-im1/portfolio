@@ -10,11 +10,11 @@ export default function ContactSection() {
       <div className="flex justify-center space-x-6 mt-8">
         <a href="https://linkedin.com/in/justin-im1" target="_blank" rel="noopener noreferrer" 
            className="text-white hover:scale-110 transition-transform">
-          <LinkedinSocialIcon />
+          <LinkedinSocialIcon className="w-7 h-7 md:w-8 md:h-8"/>
         </a>
         <a href="https://github.com/justin-im1" target="_blank" rel="noopener noreferrer" 
            className="text-white hover:scale-110 transition-transform">
-          <GithubSocialIcon />
+          <GithubSocialIcon className="w-7 h-7 md:w-8 md:h-8"/>
         </a>
       </div>
     </div>
