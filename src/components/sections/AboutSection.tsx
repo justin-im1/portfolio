@@ -10,7 +10,7 @@ export default function AboutSection() {
       </p>
 
       <p>
-        I'm currently seeking winter 2026 internship opportunities!
+        I'm currently seeking winter 2026 SWE internship opportunities!
       </p>
     </div>
   );
