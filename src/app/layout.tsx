@@ -17,8 +17,8 @@ const electrolize = Electrolize({
 const activeFont = electrolize;
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A modern portfolio showcasing my work and experience",
+  title: "Justin Im's Portfolio",
+  description: "Systems Design Engineering student at the University of Waterloo focused on full‑stack development. Seeking winter 2026 software engineering internships.",
 };
 
 export default function RootLayout({
