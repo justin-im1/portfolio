@@ -1,13 +1,14 @@
 'use client';
 
 import React from 'react';
-import { getThemedColorHex } from '@/utils/styling';
 import { sections } from '@/data/sections';
+import { useColor } from '@/contexts/ColorContext';
 import AboutSection from '@/components/sections/AboutSection';
 import WorkSection from '@/components/sections/WorkSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import ContactSection from '@/components/sections/ContactSection';
+import { ColorCube } from '@/components/ColorCube';
 
 const sectionComponents = {
   about: AboutSection,
@@ -18,11 +19,16 @@ const sectionComponents = {
 };
 
 export default function Home() {
+  const { currentColor } = useColor();
+
   return (
     <main className="min-h-screen bg-black md:py-20 py-12 px-4">
       <div className="max-w-2xl mx-auto">
         <header className="mb-24">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-widest text-white/90 mb-2 uppercase text-left">Justin Im</h1>
+          <div className="flex items-center justify-between">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-widest text-white/90 uppercase">Justin Im</h1>
+            <ColorCube />
+          </div>
         </header>
         <div className="space-y-12">
           {sections.map(section => {
@@ -31,7 +37,7 @@ export default function Home() {
               <section key={section.key}>
                 <h2
                   className="text-xl md:text-2xl font-bold mb-4 tracking-widest"
-                  style={{ color: getThemedColorHex(section.color)}}
+                  style={{ color: currentColor }}
                 >
                   {section.title}
                 </h2>
