@@ -26,11 +26,11 @@ export const ColorCube = () => {
   // Define each face with its color, position, and rotation
   const faces = [
     { colour: "#3b82f6", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] }, // Front - Blue
-    { colour: "#8b5cf6", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Purple
-    { colour: "#06b6d4", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Cyan
+    { colour: "#f59e0b", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Amber
+    { colour: "#ef4444", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Red
     { colour: "#10b981", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] }, // Left - Emerald
-    { colour: "#f59e0b", position: [0, faceSize / 2, 0] as [number, number, number], rotation: [-Math.PI / 2, 0, 0] as [number, number, number] }, // Top - Amber
-    { colour: "#ef4444", position: [0, -faceSize / 2, 0] as [number, number, number], rotation: [Math.PI / 2, 0, 0] as [number, number, number] }, // Bottom - Red
+    { colour: "#8b5cf6", position: [0, faceSize / 2, 0] as [number, number, number], rotation: [-Math.PI / 2, 0, 0] as [number, number, number] }, // Top - Purple
+    { colour: "#06b6d4", position: [0, -faceSize / 2, 0] as [number, number, number], rotation: [Math.PI / 2, 0, 0] as [number, number, number] }, // Bottom - Cyan
   ];
 
   const handleFaceClick = (colour: string) => {
@@ -62,8 +62,8 @@ export const ColorCube = () => {
           enableZoom={false} 
           enablePan={false}
           autoRotate
-          autoRotateSpeed={0.5}
-          rotateSpeed={0.5}
+          autoRotateSpeed={0.2}
+          rotateSpeed={0.2}
         />
       </Canvas>
     </div>
