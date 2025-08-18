@@ -52,10 +52,10 @@ export const ColorCube = () => {
   }, []);
 
   const faces = [
-    { colour: "#FF6B6B", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] }, // Front - Your Red (confidence)
-    { colour: "#10B981", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Your Emerald (professional)
-    { colour: "#F59E0B", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Your Amber (premium)
-    { colour: "#8B5CF6", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] }, // Left - Your Purple (creative)
+    { colour: "#FF6B6B", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] },
+    { colour: "#10B981", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] },
+    { colour: "#F59E0B", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] },
+    { colour: "#8B5CF6", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] },
   ];
 
   const handleFaceClick = (colour: string) => {
