@@ -3,8 +3,8 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface ColorContextType {
-  currentColor: string | null;
-  setCurrentColor: (color: string | null) => void;
+  currentColor: string;
+  setCurrentColor: (color: string) => void;
 }
 
 const ColorContext = createContext<ColorContextType | undefined>(undefined);
@@ -22,7 +22,7 @@ interface ColorProviderProps {
 }
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
-  const [currentColor, setCurrentColor] = useState<string | null>(null); // No default color
+  const [currentColor, setCurrentColor] = useState<string>('#FF6B6B');
 
   return (
     <ColorContext.Provider value={{ currentColor, setCurrentColor }}>

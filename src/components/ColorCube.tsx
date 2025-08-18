@@ -27,7 +27,7 @@ export const ColorCube = () => {
         if (!testGl) {
           setWebglAvailable(false);
         } else {
-          setCurrentColor('#3b82f6');
+          setCurrentColor('#FF6B6B');
         }
       } catch (error) {
         setWebglAvailable(false);
@@ -52,10 +52,10 @@ export const ColorCube = () => {
   }, []);
 
   const faces = [
-    { colour: "#3b82f6", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] }, // Front - Blue
-    { colour: "#f59e0b", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Amber
-    { colour: "#ef4444", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Red
-    { colour: "#10b981", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] }, // Left - Emerald
+    { colour: "#FF6B6B", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] }, // Front - Your Red (confidence)
+    { colour: "#10B981", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Your Emerald (professional)
+    { colour: "#F59E0B", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Your Amber (premium)
+    { colour: "#8B5CF6", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] }, // Left - Your Purple (creative)
   ];
 
   const handleFaceClick = (colour: string) => {
