@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { sections } from '@/data/sections';
+import { getThemedColorHex } from '@/utils/styling';
 import { useColor } from '@/contexts/ColorContext';
 import AboutSection from '@/components/sections/AboutSection';
 import WorkSection from '@/components/sections/WorkSection';
@@ -37,7 +38,7 @@ export default function Home() {
               <section key={section.key}>
                 <h2
                   className="text-xl md:text-2xl font-bold mb-4 tracking-widest"
-                  style={{ color: currentColor }}
+                  style={{ color: currentColor || getThemedColorHex(section.color) }}
                 >
                   {section.title}
                 </h2>

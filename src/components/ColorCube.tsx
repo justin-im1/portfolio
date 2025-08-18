@@ -7,7 +7,35 @@ import { useColor } from "@/contexts/ColorContext";
 
 export const ColorCube = () => {
   const [faceSize, setFaceSize] = useState(5);
+  const [webglAvailable, setWebglAvailable] = useState(true);
   const { setCurrentColor } = useColor();
+
+  useEffect(() => {
+    const checkWebGL = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) {
+          setWebglAvailable(false);
+          return;
+        }
+        
+        const testCanvas = document.createElement('canvas');
+        testCanvas.width = 1;
+        testCanvas.height = 1;
+        const testGl = testCanvas.getContext('webgl');
+        if (!testGl) {
+          setWebglAvailable(false);
+        } else {
+          setCurrentColor('#3b82f6');
+        }
+      } catch (error) {
+        setWebglAvailable(false);
+      }
+    };
+
+    checkWebGL();
+  }, [setCurrentColor]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,19 +51,22 @@ export const ColorCube = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Define each face with its color, position, and rotation
   const faces = [
     { colour: "#3b82f6", position: [0, 0, faceSize / 2] as [number, number, number], rotation: [0, 0, 0] as [number, number, number] }, // Front - Blue
     { colour: "#f59e0b", position: [0, 0, -faceSize / 2] as [number, number, number], rotation: [0, Math.PI, 0] as [number, number, number] }, // Back - Amber
     { colour: "#ef4444", position: [faceSize / 2, 0, 0] as [number, number, number], rotation: [0, Math.PI / 2, 0] as [number, number, number] }, // Right - Red
     { colour: "#10b981", position: [-faceSize / 2, 0, 0] as [number, number, number], rotation: [0, -Math.PI / 2, 0] as [number, number, number] }, // Left - Emerald
-    { colour: "#8b5cf6", position: [0, faceSize / 2, 0] as [number, number, number], rotation: [-Math.PI / 2, 0, 0] as [number, number, number] }, // Top - Purple
-    { colour: "#06b6d4", position: [0, -faceSize / 2, 0] as [number, number, number], rotation: [Math.PI / 2, 0, 0] as [number, number, number] }, // Bottom - Cyan
   ];
 
   const handleFaceClick = (colour: string) => {
-    setCurrentColor(colour);
+    if (webglAvailable) {
+      setCurrentColor(colour);
+    }
   };
+
+  if (!webglAvailable) {
+    return null;
+  }
 
   return (
     <div className="w-24 h-24">
@@ -61,9 +92,12 @@ export const ColorCube = () => {
         <OrbitControls 
           enableZoom={false} 
           enablePan={false}
+          enableRotate={true}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
           autoRotate
-          autoRotateSpeed={0.2}
-          rotateSpeed={0.2}
+          autoRotateSpeed={0.5}
+          rotateSpeed={0.25}
         />
       </Canvas>
     </div>
