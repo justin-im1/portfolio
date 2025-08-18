@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Electrolize } from "next/font/google";
 import "./globals.css";
+import { ColorProvider } from "@/contexts/ColorContext";
 
 const electrolize = Electrolize({
   weight: ['400'],
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body className={`${activeFont.className} antialiased`}>
-        {children}
+        <ColorProvider>
+          {children}
+        </ColorProvider>
       </body>
     </html>
   );
