@@ -29,7 +29,7 @@ export const ColorCube = () => {
         } else {
           setCurrentColor('#FF6B6B');
         }
-      } catch (error) {
+      } catch {
         setWebglAvailable(false);
       }
     };
