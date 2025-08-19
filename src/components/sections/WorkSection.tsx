@@ -23,7 +23,7 @@ export default function WorkSection() {
 
       <div className="flex items-center justify-between">
         <div className="pr-3 md:pr-4">
-          <div className="font-semibold text-white/90 text-sm md:text-base">UI/UX Designer and Developer Intern - Voxer</div>
+          <div className="font-semibold text-white/90 text-sm md:text-base">UI Developer Intern - Voxer</div>
           <div className="text-gray-400 text-sm md:text-base mt-1">Enhancing the telecom experience</div>
         </div>
         <div className="w-6 h-6 md:w-10 md:h-10 flex items-center justify-center md:justify-end md:pr-1 md:mr-0.4 mr-0">

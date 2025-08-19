@@ -13,7 +13,7 @@ const activeFont = electrolize;
 
 export const metadata: Metadata = {
   title: "Justin Im's Portfolio",
-  description: "Systems Design Engineering student at the University of Waterloo focused on full‑stack development. Seeking winter 2026 software engineering internships.",
+  description: "Systems Design Engineering student at the University of Waterloo focused on full‑stack development. Seeking Winter 2026 software engineering internships.",
 };
 
 export default function RootLayout({
