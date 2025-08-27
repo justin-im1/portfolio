@@ -96,7 +96,7 @@ export const ColorCube = () => {
           minPolarAngle={Math.PI / 2}
           maxPolarAngle={Math.PI / 2}
           autoRotate
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={1.75}
           rotateSpeed={0.25}
         />
       </Canvas>
