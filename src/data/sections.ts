@@ -9,7 +9,7 @@ export interface Section {
 export const sections: Section[] = [
   {
     key: 'about',
-    title: 'About',
+    title: 'About Me',
     color: 'blue',
   },
   {
